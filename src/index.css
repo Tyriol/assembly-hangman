@@ -5,7 +5,7 @@
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #root {
@@ -17,4 +17,16 @@
   width: 100dvw;
   margin: 0 auto;
   padding: 2rem;
+}
+
+@media (max-width: 375px) {
+  * {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    justify-content: center;
+  }
 }

@@ -16,8 +16,8 @@
   - Description ✅
 - Game Status Section ✅
 - Programming Lang's section
-  - create langages js file exporting array of objects
-  - map through array to display on the page
+  - create langages js file exporting array of objects ✅
+  - map through array to display on the page ✅
 - Letters to be guessed section
 - Keyboard section
 - New game button

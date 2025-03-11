@@ -1,3 +1,9 @@
+p {
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -9,10 +15,21 @@ header {
     font-size: 1.25rem;
     font-weight: 600;
   }
+}
 
-  & p {
-    font-size: 0.75rem;
-    text-align: center;
-    font-weight: 500;
+main > section.game-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #10a95b;
+  max-width: 350px;
+  height: 60px;
+  border-radius: 5px;
+  margin-block: 2rem;
+
+  & h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
   }
 }

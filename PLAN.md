@@ -22,4 +22,12 @@
   - map through array to display on the page ✅
 - Letters to be guessed section with hard coded word "react" ✅
 - Keyboard section ✅
-- New game button
+- New game button ✅
+
+## Add functionality
+
+- Add state to store guessed letters ✅
+- install clsx
+- Compare guessed letters against randomWord and change colour of key depending on:
+  - if it's correctly guessed
+  - incorrectly guessed

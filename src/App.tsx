@@ -1,8 +1,12 @@
+import { useState } from "react";
 import "./App.css";
 import languages from "./data/languages";
 
 function App() {
-  const randomWord = "react";
+  const [currentWord] = useState<string>("react");
+  const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
+  console.log(guessedLetters);
+
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const languageElements = languages.map((lang) => {
     const styles = {
@@ -16,7 +20,7 @@ function App() {
     );
   });
 
-  const letters = randomWord.split("").map((char, i) => {
+  const letters = currentWord.split("").map((char, i) => {
     return (
       <span key={i} className="letter">
         {char.toUpperCase()}
@@ -24,9 +28,15 @@ function App() {
     );
   });
 
+  function addGuessedLetter(letter: string) {
+    setGuessedLetters((prevGuesses) =>
+      prevGuesses.includes(letter) ? prevGuesses : [...prevGuesses, letter]
+    );
+  }
+
   const keys = alphabet.split("").map((char) => {
     return (
-      <button className="key" key={char}>
+      <button onClick={() => addGuessedLetter(char)} className="key" key={char}>
         {char.toUpperCase()}
       </button>
     );

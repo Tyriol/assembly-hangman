@@ -6,9 +6,11 @@
 ## Build Skeleton with hard-coded info
 
 - Choose colour palette and add css variables ✅
-  - Background: 1C3144
-  - Text: C3D898
-  - Letters background: 596F62
+  - Background: #1C3144
+  - Text: #C3D898
+  - Letters background: #596F62
+  - Correct colour: #7ea16b
+  - Incorrect colour #70161e:
 - Default css styling to reset styles ✅
 
 - Header: ✅
@@ -19,5 +21,5 @@
   - create langages js file exporting array of objects ✅
   - map through array to display on the page ✅
 - Letters to be guessed section with hard coded word "react" ✅
-- Keyboard section
+- Keyboard section ✅
 - New game button

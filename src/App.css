@@ -60,6 +60,7 @@ section.languages {
   width: auto;
   display: flex;
   gap: 2px;
+  margin-bottom: 30px;
 }
 
 .letter {
@@ -70,4 +71,21 @@ section.languages {
   color: #c3d898;
   align-content: center;
   text-align: center;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fcba29;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  border: 1px solid #c3d898;
 }

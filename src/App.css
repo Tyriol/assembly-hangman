@@ -81,7 +81,7 @@ section.languages {
   margin-bottom: 30px;
 }
 
-.key {
+section.keyboard > button {
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -90,6 +90,15 @@ section.languages {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   border: 1px solid #c3d898;
+}
+
+section.keyboard > button.correct {
+  background-color: #7ea16b;
+}
+
+section.keyboard > button.incorrect {
+  background-color: #70161e;
+  color: #7ea16b;
 }
 
 button.new-game {

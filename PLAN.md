@@ -27,7 +27,7 @@
 ## Add functionality
 
 - Add state to store guessed letters ✅
-- install clsx
+- install clsx ✅
 - Compare guessed letters against randomWord and change colour of key depending on:
-  - if it's correctly guessed
-  - incorrectly guessed
+  - if it's correctly guessed ✅
+  - incorrectly guessed ✅

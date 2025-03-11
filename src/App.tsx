@@ -1,4 +1,5 @@
 import { useState } from "react";
+import clsx from "clsx";
 import "./App.css";
 import languages from "./data/languages";
 
@@ -35,8 +36,15 @@ function App() {
   }
 
   const keys = alphabet.split("").map((char) => {
+    const isGuessed = guessedLetters.includes(char);
+    const isCorrect = isGuessed && currentWord.includes(char);
+    const isIncorrect = isGuessed && !currentWord.includes(char);
+    const classNames = clsx({
+      correct: isCorrect,
+      incorrect: isIncorrect,
+    });
     return (
-      <button onClick={() => addGuessedLetter(char)} className="key" key={char}>
+      <button className={classNames} onClick={() => addGuessedLetter(char)} key={char}>
         {char.toUpperCase()}
       </button>
     );

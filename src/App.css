@@ -46,6 +46,7 @@ section.languages {
   flex-wrap: wrap;
   gap: 3px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .language {
@@ -53,4 +54,20 @@ section.languages {
   border-radius: 5px;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+.letters {
+  width: auto;
+  display: flex;
+  gap: 2px;
+}
+
+.letter {
+  width: 40px;
+  height: 40px;
+  border-bottom: 1px solid #c3d898;
+  background-color: #596f62;
+  color: #c3d898;
+  align-content: center;
+  text-align: center;
 }

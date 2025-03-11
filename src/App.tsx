@@ -2,6 +2,7 @@ import "./App.css";
 import languages from "./data/languages";
 
 function App() {
+  const randomWord = "react";
   const languageElements = languages.map((lang) => {
     const styles = {
       backgroundColor: lang.backgroundColor,
@@ -12,6 +13,10 @@ function App() {
         {lang.name}
       </span>
     );
+  });
+
+  const letters = randomWord.split("").map((char) => {
+    return <span className="letter">{char.toLocaleUpperCase()}</span>;
   });
 
   return (
@@ -26,6 +31,7 @@ function App() {
           <p>Well done! 🎉</p>
         </section>
         <section className="languages">{languageElements}</section>
+        <section className="letters">{letters}</section>
       </main>
     </>
   );

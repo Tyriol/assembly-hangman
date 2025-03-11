@@ -18,6 +18,6 @@
 - Programming Lang's section
   - create langages js file exporting array of objects ✅
   - map through array to display on the page ✅
-- Letters to be guessed section
+- Letters to be guessed section with hard coded word "react" ✅
 - Keyboard section
 - New game button

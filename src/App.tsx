@@ -46,6 +46,9 @@ function App() {
         <section className="languages">{languageElements}</section>
         <section className="letters">{letters}</section>
         <section className="keyboard">{keys}</section>
+        <button className="new-game" type="button">
+          New Game
+        </button>
       </main>
     </>
   );

@@ -7,6 +7,10 @@ function App() {
   const [currentWord] = useState<string>("react");
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
+  const wrongGuessCount: number = guessedLetters.filter(
+    (letter) => !currentWord.includes(letter)
+  ).length;
+
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const languageElements = languages.map((lang) => {
     const styles = {

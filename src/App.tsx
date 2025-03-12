@@ -11,6 +11,10 @@ function App() {
     (letter) => !currentWord.includes(letter)
   ).length;
 
+  const isGameWon = currentWord.split("").every((letter) => guessedLetters.includes(letter));
+  const isGameLost = wrongGuessCount === languages.length - 1;
+  const isGameOver = isGameWon || isGameLost;
+
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const languageElements = languages.map((lang, i) => {
     const lostLanguage = i < wrongGuessCount;
@@ -47,7 +51,12 @@ function App() {
       incorrect: isIncorrect,
     });
     return (
-      <button className={classNames} onClick={() => addGuessedLetter(char)} key={char}>
+      <button
+        disabled={isGameOver}
+        className={classNames}
+        onClick={() => addGuessedLetter(char)}
+        key={char}
+      >
         {char.toUpperCase()}
       </button>
     );
@@ -67,9 +76,7 @@ function App() {
         <section className="languages">{languageElements}</section>
         <section className="letters">{letters}</section>
         <section className="keyboard">{keys}</section>
-        <button className="new-game" type="button">
-          New Game
-        </button>
+        <div className="new-game">{isGameOver && <button type="button">New Game</button>}</div>
       </main>
     </>
   );

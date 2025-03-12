@@ -117,12 +117,19 @@ section.keyboard > button.incorrect {
   color: #c3d898;
 }
 
-button.new-game {
+.new-game {
+  height: 42px;
+  width: 100%;
+  text-align: center;
+}
+
+.new-game > button {
   background-color: #345a7c;
   border: 1px solid #596f62;
   border-radius: 0.5rem;
   color: #c3d898;
-  padding: 10px 15px;
+  height: 100%;
+  width: 70%;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
 }

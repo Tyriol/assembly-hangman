@@ -97,6 +97,10 @@ function App() {
     wrong: isLastGuessIncorrect,
   });
 
+  function newGame() {
+    setGuessedLetters([]);
+  }
+
   return (
     <>
       <header>
@@ -108,7 +112,13 @@ function App() {
         <section className="languages">{languageElements}</section>
         <section className="letters">{letters}</section>
         <section className="keyboard">{keys}</section>
-        <div className="new-game">{isGameOver && <button type="button">New Game</button>}</div>
+        <div className="new-game">
+          {isGameOver && (
+            <button onClick={newGame} type="button">
+              New Game
+            </button>
+          )}
+        </div>
       </main>
     </>
   );

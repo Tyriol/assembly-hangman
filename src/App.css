@@ -41,6 +41,13 @@ section.game-status {
   }
 }
 
+section.game-status.wrong {
+  background: #7526aa;
+  border: 1px dashed #c3d898;
+  font-style: italic;
+  font-weight: 400;
+}
+
 section.game-status.won {
   background: #10a95b;
 }

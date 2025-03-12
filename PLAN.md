@@ -42,7 +42,7 @@
 - conditionally render new game button if game is over ✅
 - disable keyboard if game is over ✅
 - create dynamic styling for game status section if it's a win or a loss ✅
-- add farewell messages when languages are lost
+- add farewell messages when languages are lost ✅
 - fix a11y issues
 - make new game button work
 - choose a random word to guess

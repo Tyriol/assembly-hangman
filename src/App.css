@@ -69,6 +69,7 @@ section.languages {
   border-bottom: 1px solid #c3d898;
   background-color: #596f62;
   color: #c3d898;
+  font-weight: 600;
   align-content: center;
   text-align: center;
 }
@@ -98,7 +99,7 @@ section.keyboard > button.correct {
 
 section.keyboard > button.incorrect {
   background-color: #70161e;
-  color: #7ea16b;
+  color: #c3d898;
 }
 
 button.new-game {

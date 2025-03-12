@@ -54,6 +54,21 @@ section.languages {
   border-radius: 5px;
   font-size: 0.8rem;
   font-weight: 500;
+  position: relative;
+}
+
+.language.lost::before {
+  content: "💀";
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .letters {

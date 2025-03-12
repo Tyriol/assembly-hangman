@@ -12,13 +12,15 @@ function App() {
   ).length;
 
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  const languageElements = languages.map((lang) => {
+  const languageElements = languages.map((lang, i) => {
+    const lostLanguage = i < wrongGuessCount;
     const styles = {
       backgroundColor: lang.backgroundColor,
       color: lang.color,
     };
+    const classNames = clsx("language", lostLanguage && "lost");
     return (
-      <span className="language" style={styles} key={lang.name}>
+      <span className={classNames} style={styles} key={lang.name}>
         {lang.name}
       </span>
     );

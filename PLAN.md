@@ -32,6 +32,6 @@
   - if it's correctly guessed ✅
   - incorrectly guessed ✅
 - Hide letters untill guessed correctly ✅
-- track wrong guess count
-- add styling for a "lost" language
-- apply lost styling to languages when guesses are incorrect
+- track wrong guess count ✅
+- add styling for a "lost" language ✅
+- apply lost styling to languages when guesses are incorrect ✅

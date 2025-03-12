@@ -6,7 +6,6 @@ import languages from "./data/languages";
 function App() {
   const [currentWord] = useState<string>("react");
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
-  console.log(guessedLetters);
 
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const languageElements = languages.map((lang) => {
@@ -21,13 +20,11 @@ function App() {
     );
   });
 
-  const letters = currentWord.split("").map((char, i) => {
-    return (
-      <span key={i} className="letter">
-        {char.toUpperCase()}
-      </span>
-    );
-  });
+  const letters = currentWord.split("").map((char, i) => (
+    <span key={i} className="letter">
+      {guessedLetters.includes(char) ? char.toUpperCase() : ""}
+    </span>
+  ));
 
   function addGuessedLetter(letter: string) {
     setGuessedLetters((prevGuesses) =>

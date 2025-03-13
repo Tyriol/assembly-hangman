@@ -17,6 +17,7 @@ function App() {
   const isGameOver = isGameWon || isGameLost;
   const lastGuess = guessedLetters[guessedLetters.length - 1];
   const isLastGuessIncorrect = lastGuess && !currentWord.includes(lastGuess);
+  const numGuessesLeft = languages.length - 1 - wrongGuessCount;
 
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const languageElements = languages.map((lang, i) => {
@@ -56,6 +57,8 @@ function App() {
     return (
       <button
         disabled={isGameOver}
+        aria-disabled={guessedLetters.includes(char)}
+        aria-label={`letter ${char}`}
         className={classNames}
         onClick={() => addGuessedLetter(char)}
         key={char}
@@ -109,9 +112,30 @@ function App() {
         <p>Guess the word in under 8 attempts to keep the programming world safe from Assembly</p>
       </header>
       <main>
-        <section className={gameStatusClass}>{renderGameStatus()}</section>
+        <section aria-live="polite" role="status" className={gameStatusClass}>
+          {renderGameStatus()}
+        </section>
         <section className="languages">{languageElements}</section>
         <section className="letters">{letters}</section>
+        <section className="sr-only" aria-live="polite" role="status">
+          {guessedLetters.length > 0 && (
+            <p>
+              {currentWord.includes(lastGuess)
+                ? `Correct! The word contains ${lastGuess.toUpperCase()}`
+                : `Sorry, the word does not contain the letter ${lastGuess.toUpperCase()}`}{" "}
+              You have {numGuessesLeft} guesses left
+            </p>
+          )}
+          <p>
+            The Current word is:{" "}
+            {currentWord
+              .split("")
+              .map((char) => {
+                return guessedLetters.includes(char) ? `${char.toUpperCase()}.` : "blank";
+              })
+              .join(" ")}
+          </p>
+        </section>
         <section className="keyboard">{keys}</section>
         <div className="new-game">
           {isGameOver && (

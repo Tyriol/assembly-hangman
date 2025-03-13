@@ -43,6 +43,9 @@
 - disable keyboard if game is over ✅
 - create dynamic styling for game status section if it's a win or a loss ✅
 - add farewell messages when languages are lost ✅
+- make new game button work ✅
+- add file with lots of random words ✅
 - fix a11y issues
-- make new game button work
 - choose a random word to guess
+- display word if game lost
+- add confetti

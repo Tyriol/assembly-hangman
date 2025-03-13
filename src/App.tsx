@@ -2,10 +2,10 @@ import { useState } from "react";
 import clsx from "clsx";
 import "./App.css";
 import languages from "./data/languages";
-import { getFarewellMessage } from "./data/utils";
+import { getFarewellMessage, getRandomWord } from "./helpers/utils";
 
 function App() {
-  const [currentWord] = useState<string>("react");
+  const [currentWord, setCurrentWord] = useState<string>(() => getRandomWord());
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
   const wrongGuessCount: number = guessedLetters.filter(
@@ -98,6 +98,7 @@ function App() {
   });
 
   function newGame() {
+    setCurrentWord(getRandomWord());
     setGuessedLetters([]);
   }
 

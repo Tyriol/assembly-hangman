@@ -45,7 +45,7 @@
 - add farewell messages when languages are lost ✅
 - make new game button work ✅
 - add file with lots of random words ✅
-- fix a11y issues
-- choose a random word to guess
-- display word if game lost
+- fix a11y issues ✅
+- choose a random word to guess ✅
+- display word if game lost ✅
 - add confetti

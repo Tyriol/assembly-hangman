@@ -86,14 +86,14 @@ section.languages {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.letters {
+section.letters {
   width: auto;
   display: flex;
   gap: 2px;
   margin-bottom: 30px;
 }
 
-.letter {
+section.letters > .letter {
   width: 40px;
   height: 40px;
   border-bottom: 1px solid #c3d898;
@@ -102,6 +102,10 @@ section.languages {
   font-weight: 600;
   align-content: center;
   text-align: center;
+}
+
+section.letters > .letter.game-lost {
+  color: #70161e;
 }
 
 .keyboard {

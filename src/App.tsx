@@ -34,11 +34,17 @@ function App() {
     );
   });
 
-  const letters = currentWord.split("").map((char, i) => (
-    <span key={i} className="letter">
-      {guessedLetters.includes(char) ? char.toUpperCase() : ""}
-    </span>
-  ));
+  const letters = currentWord.split("").map((char, i) => {
+    const lettersClassName = clsx(
+      "letter",
+      isGameLost && !guessedLetters.includes(char) && "game-lost"
+    );
+    return (
+      <span key={i} className={lettersClassName}>
+        {guessedLetters.includes(char) || isGameLost ? char.toUpperCase() : ""}
+      </span>
+    );
+  });
 
   function addGuessedLetter(letter: string) {
     setGuessedLetters((prevGuesses) =>

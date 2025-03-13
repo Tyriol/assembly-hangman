@@ -103,7 +103,7 @@ function App() {
   const gameStatusClass = clsx("game-status", {
     won: isGameWon,
     lost: isGameLost,
-    wrong: isLastGuessIncorrect,
+    wrong: isLastGuessIncorrect && !isGameOver,
   });
 
   function newGame() {

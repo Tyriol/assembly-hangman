@@ -1,5 +1,6 @@
 import { useState } from "react";
 import clsx from "clsx";
+import Confetti from "react-confetti";
 import "./App.css";
 import languages from "./data/languages";
 import { getFarewellMessage, getRandomWord } from "./helpers/utils";
@@ -113,6 +114,7 @@ function App() {
 
   return (
     <>
+      {isGameWon && <Confetti numberOfPieces={1000} recycle={false} />}
       <header>
         <h1>Assembly: Endgame</h1>
         <p>Guess the word in under 8 attempts to keep the programming world safe from Assembly</p>

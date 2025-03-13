@@ -114,6 +114,7 @@ section.letters > .letter.game-lost {
   justify-content: center;
   gap: 5px;
   margin-bottom: 30px;
+  max-width: 350px;
 }
 
 section.keyboard > button {
